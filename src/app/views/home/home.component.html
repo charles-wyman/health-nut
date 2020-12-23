@@ -1,0 +1,46 @@
+<div class="d-inline-flex justify-content-between flex-wrap w-100">
+  <mat-card class="w-100 text-nowrap align-top m-1 text-center">
+    <mat-card-title>Starting Weight</mat-card-title>
+    <mat-card-content>
+      <div>{{ startingWeight.mass | weight: weightStandard }}</div>
+      <div>
+        Date: {{ startingWeight != null ? (startingWeight.eventDate | date) : 'No Data' }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="w-100 text-nowrap align-top m-1 text-center">
+    <mat-card-title>Current Weight</mat-card-title>
+    <mat-card-content>
+      <div>{{ currentWeight.mass | weight: weightStandard }}</div>
+      <div>
+        Date: {{ currentWeight.eventDate | date }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="w-100 text-nowrap align-top m-1 text-center">
+    <mat-card-title>Target Weight</mat-card-title>
+    <mat-card-content>
+      <div>{{ targetWeight.mass | weight: weightStandard }}</div>
+      <div>
+        Target Date: {{ targetWeight.eventDate | date }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="w-100 text-nowrap align-top m-1 text-center">
+    <mat-card-title>Weight Lost To Date</mat-card-title>
+    <mat-card-content>
+      <div>{{ weightLost | weight: weightStandard }}
+        ({{ weightLost | number }} Cal) </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="w-100 text-nowrap align-top m-1 text-center">
+    <mat-card-title>Average Daily Weight Loss</mat-card-title>
+    <mat-card-content>
+      <div>{{ avgWeightLost | weight: weightStandard }}
+        ({{ avgWeightLost | number }} Cal) </div>
+    </mat-card-content>
+  </mat-card>
+</div>

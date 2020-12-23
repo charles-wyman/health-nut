@@ -1,1 +1,79 @@
+// Import bootstrap
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap');
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$health-nut-primary: mat-palette($mat-indigo);
+$health-nut-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$health-nut-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$health-nut-theme: mat-light-theme((color: (primary: $health-nut-primary,
+      accent: $health-nut-accent,
+      warn: $health-nut-warn,
+    )));
+
+$health-nut-xlite-green: #C1FB67;
+$health-nut-lite-green: #99FA08;
+$health-nut-med-green: #85DC00;
+$health-nut-dark-green: #6AFF00;
+$health-nut-xdark-green: #1A7A49;
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($health-nut-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+  background-color: $health-nut-dark-green;
+  color: $health-nut-xdark-green !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', Roboto, "Helvetica Neue", sans-serif;
+  color: $health-nut-xdark-green !important;
+}
+
+#side-nav {
+  background-color: $health-nut-lite-green;
+  min-width: max-content;
+}
+
+#main-content {
+  background-color: $health-nut-xlite-green;
+}
+
+mat-card {
+  background-color: $health-nut-med-green !important;
+  width: auto;
+  min-width: min-content;
+  mat-card-title {
+    color: $health-nut-xdark-green !important;
+  };
+  
+}
