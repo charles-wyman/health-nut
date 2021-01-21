@@ -1,9 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
-export enum WeightStandards  {
-  Imperial = 'Imperial',
-  Metric = 'Metric'
-}
+import { WeightStandards } from 'src/app/models/weight-standards/weight-standards.model';
 
 @Pipe({
   name: 'weight'

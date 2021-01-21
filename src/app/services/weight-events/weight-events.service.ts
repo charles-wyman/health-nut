@@ -21,7 +21,12 @@ export class WeightEventsService {
       mass: 1010800,
       eventDate: '2020-09-27T12:00:00'
     };
-    this.mWeightEvents = [event1, event2];
+    const event3: WeightEvent = {
+      mass: 985990,
+      eventDate: '2020-12-23T12:00:00'
+    };
+
+    this.mWeightEvents = [event1, event2, event3];
     this.weightEvents$ = new BehaviorSubject(this.mWeightEvents);
     this.startingWeight$ = new BehaviorSubject(this.firstEvent);
     this.currentWeight$ = new BehaviorSubject(this.lastEvent);

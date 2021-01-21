@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LandmarkService } from 'src/app/services/landmark/landmark.service';
-import { WeightStandards } from 'src/app/pipes/weight/weight.pipe';
+import { WeightStandards } from 'src/app/models/weight-standards/weight-standards.model';
 import { WeightEventsService } from 'src/app/services/weight-events/weight-events.service';
 import { WeightEvent } from 'src/app/models/weight/weight-event.model';
 import { Subject } from 'rxjs';
